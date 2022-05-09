@@ -1,0 +1,67 @@
+.easy {
+
+    &__container {
+        padding-left: -40px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__img {
+        flex-shrink: 0;
+        margin-top: 100px;
+        margin-left: -40px;
+    }
+
+    &__right {
+        margin-top: 65px;
+        margin-left: 40px;
+        max-width: 445px;
+    }
+
+    &__right-heading {
+        margin: 0;
+        margin-bottom: 24px;
+        font-family: 'DM Serif Display';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 56px;
+        letter-spacing: -0.369231px;
+        color: #36536B;
+    }
+
+    &__right-desc {
+        margin: 0;
+        font-size: 15px;
+        line-height: 28px;
+        color: #6C8294;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .easy {
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__img {
+            margin-left: 30px;
+            width: 392px;
+            height: 250px;
+            flex-shrink: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    .easy {
+
+        &__right-heading {
+            font-size: 36px;
+            line-height: 36px;
+        }
+    }
+}

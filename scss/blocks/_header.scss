@@ -1,0 +1,135 @@
+
+
+.header {
+
+    &__logo {
+        margin: 5px 0;
+        flex-shrink: 0;
+    }
+
+    &__container {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+    }
+
+    &__nav-list {
+        margin: 0;
+        margin-right: 16px;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__nav-item {
+        margin: 0 12px;
+        display: inline;
+    }
+
+    &__nav-link {
+        padding: 5px 8px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 18px;
+        color: #36536B;
+        mix-blend-mode: normal;
+        opacity: 0.7;
+    }
+
+    &__nav-link:hover {
+        border-bottom: 2px solid #FF0000;
+    }
+
+    &__nav-link:active {
+        color: #FF0000;
+        mix-blend-mode: normal;
+        opacity: 0.5;
+    }
+
+    &__divider {
+        display: none;
+        background: #FBFCFE;
+        max-width: 100%;
+        border: 1px solid #FBFCFE;
+        opacity: 0.15;
+    }
+
+    &__hamburger {
+        border: none;
+        background-color: transparent;
+        display: none;
+        width: 28px;
+        height: 17px;
+        background-image: url("../images/hamburger.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        transition: all 0.4s;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .header {
+        position: relative;
+
+        &__nav {
+            display: none;
+        }
+
+        &__hamburger {
+            display: block;
+        }
+    }
+
+    .header--open .header__nav {
+        padding: 88px 24px 0;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        top: 0;
+        max-width: 576px;
+        width: 100%;
+        min-height: 667px;
+        background-color: #1B262F;
+    }
+
+    .header--open .header__nav-list {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .header--open .header__nav-item {
+        margin: 32px;
+    }
+
+    .header--open .header__nav-link {
+        color: #FBFCFE;
+    }
+
+    .header--open .button {
+        padding: 15px 68px;
+    }
+
+    .header--open .header__divider {
+        margin-bottom: 11px;
+        display: block;
+        width: 576px;
+    }
+
+    .header--open .header__hamburger {
+        background-image: url("../images/closed.svg");
+        z-index: 1;
+    }
+}

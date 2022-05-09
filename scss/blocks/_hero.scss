@@ -1,0 +1,215 @@
+.hero--wrapper {
+    margin: auto;
+    max-width: 1150px;
+    width: 100%;
+    background-image: url("../images/hero-font.png");
+    background-repeat: no-repeat;
+    background-size: 780px 780px;
+    background-position: right -100px top -150px;
+}
+
+@media only screen and (max-width: 768px) {
+    .hero--wrapper {
+        background-image: url("../images/hero_font-tablet.png");
+        background-repeat: no-repeat;
+        background-size: 949px auto;
+        background-position: center top -132px;
+    }
+}
+
+@media only screen and (max-width: 568px) {
+    .hero--wrapper {
+        background-image: url("../images/hero_font-tablet.png");
+        background-repeat: no-repeat;
+        background-size: 949px auto;
+    }
+}
+
+.hero {
+
+    &__wrapper {
+        min-height: 737px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__top {
+        max-width: 546px;
+    }
+
+    &__heading {
+        margin: 0;
+        margin-bottom: 21px;
+        font-family: 'DM Serif Display', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 72px;
+        line-height: 72px;
+        letter-spacing: -0.553846px;
+        color: #36536B;
+    }
+
+    &__input {
+        padding: 15px 27px;
+        max-width: 445px;
+        width: 100%;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 18px;
+        color: #36536B;
+        mix-blend-mode: normal;
+        opacity: 0.5;
+        box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+        border-radius: 24px;
+        border: 0;
+        background: #FBFCFE;
+        cursor: pointer;
+    }
+
+    &__btn {
+        padding: 15px 25px;
+        margin-left: -171px;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: -0.115385px;
+        color: #FBFCFE;
+        background: #BA4270;
+        border-radius: 24px;
+        border: none;
+        position: absolute;
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    &__btn:hover {
+        background: #DA6D97;
+        box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+    }
+
+    &__btn:active {
+        opacity: 0.6;
+    }
+
+    &__bottom {
+        display: flex;
+        margin-top: 16px;
+    }
+
+    &__bottom-desc {
+        margin: 0;
+        font-size: 15px;
+        line-height: 18px;
+        color: #6C8294;
+    }
+
+    &__bottom-link {
+        margin: 0;
+        margin-left: 5px;
+        font-size: 15px;
+        line-height: 18px;
+        color: #6C8294;
+        text-decoration: none;
+    }
+
+    &__img {
+        margin-right: 115px;
+    }
+}
+
+@media only screen and (max-width: 880px) {
+    .hero {
+
+        &__img {
+            margin-right: 0;
+            flex-shrink: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hero {
+
+        &__wrapper {
+            flex-direction: column-reverse;
+            align-items: center;
+            min-height: 600px;
+        }
+
+        &__heading {
+            font-size: 48px;
+            line-height: 52px;
+        }
+
+        &__bottom-link {
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        &__img {
+            flex-shrink: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 488px) {
+    .hero {
+
+        &__container {
+            padding-right: 20px;
+        }
+
+        &__heading {
+            max-width: 573px;
+            width: 100%;
+            font-size: 32px;
+            line-height: 36px;
+            text-align: center;
+        }
+
+        &__form-wrapper {
+            display: flex;
+            flex-direction: column;
+            max-width: 448px;
+        }
+
+        &__input {
+            max-width: 445px;
+            margin-bottom: 16px;
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        &__btn {
+            padding: 15px auto;
+            margin-left: 0;
+            width: 100%;
+            position: relative;
+        }
+
+        &__bottom {
+            margin-right: 20px;
+            text-align: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .hero {
+
+        &__heading {
+            max-width: 330px;
+            text-align: center;
+        }
+
+        &__input {
+            width: 100%;
+        }
+
+        &__btn {
+            max-width: 335px;
+            width: 100%;
+        }
+    }
+}
